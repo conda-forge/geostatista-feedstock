@@ -1,5 +1,5 @@
 {% set name = "geostatista" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/MAfarrag/geostatista/archive/{{ version }}.tar.gz
-  sha256: 73b265578eccd638bdeac5b2b2ff0cb01f6a2fd9f908b9b1663d70f277e4e056
+  sha256: 777e03ef04cef896179f83156af194812885b217b8b6f2b8a3506d8a4e1d7830
 
 build:
   number: 0
@@ -34,7 +34,7 @@ test:
 
 about:
   home: https://github.com/MAfarrag/geostatista
-  license:  GPL-3.0-only
+  license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.md
   summary: Geo-spatial statistical package
