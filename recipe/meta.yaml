@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/MAfarrag/geostatista/archive/{{ version }}.tar.gz
-  sha256: 777e03ef04cef896179f83156af194812885b217b8b6f2b8a3506d8a4e1d7830
+  sha256: f3068963210964efd4ba0f2f8fde939c20d01d86d9805f3f51ae1f913101db1b
 
 build:
   number: 0
