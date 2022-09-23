@@ -25,6 +25,7 @@ requirements:
     - matplotlib >=3.5.3
     - gdal >=3.4.3,<3.5.1
     - pyramids >=0.2.4
+    - scikit-learn >=1.1.2
     - statista >=0.1.5
     - loguru >=0.6.0
 
