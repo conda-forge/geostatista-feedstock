@@ -25,6 +25,7 @@ requirements:
     - numpy >=1.21.2,<1.23.3
     - matplotlib >=3.5.3
     - gdal >=3.4.3,<3.5.1
+    - scipy >=1.9.1
     - pyramids >=0.2.5
     - statista >=0.1.6
     - loguru >=0.5.3
