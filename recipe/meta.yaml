@@ -27,7 +27,7 @@ requirements:
     - gdal >=3.4.3,<3.5.1
     - pyramids >=0.2.5
     - statista >=0.1.6
-    - loguru >=0.6.0
+    - loguru >=0.5.3
 
 test:
   imports:
