@@ -1,5 +1,5 @@
 {% set name = "geostatista" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/MAfarrag/geostatista/archive/{{ version }}.tar.gz
-  sha256: 9bf35177d0ebdb31487568b50144afbb442240b901515b81eaadf88807ba9759
+  sha256: 637c0f47690aa86dae8185ffaa1e2b208e302e22d6764320e8581eaa56d3e536
 
 build:
   number: 0
@@ -16,17 +16,15 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<3.15
+    - python >=3.9,<3.11
     - pip >=22.3.1
   run:
-    - python >=3.9,<3.15
+    - python >=3.9,<3.11
     - numpy ==1.23.5
     - pip >=22.3.1
     - statista >=0.1.7
-    - pyramids >=0.2.10
+    - pyramids >=0.2.11
     - loguru >=0.6.0
-    - pytest >=7.2.0
-    - pytest-cov ==4.0.0
 
 test:
   imports:
