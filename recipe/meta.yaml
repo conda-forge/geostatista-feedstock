@@ -1,48 +1,53 @@
 {% set name = "geostatista" %}
-{% set version = "0.1.6" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/MAfarrag/geostatista/archive/{{ version }}.tar.gz
-  sha256: 611086eb22264781c2d79bc8113e618032733fcc0922598c1515972f9d846144
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 058764925777cfe9330e67d0f8db12bdb2a107c8e8a1601968e04ed2332c13d5
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python {{ python_min }}
-    - pip >=22.3.1
+    - pip
+    - setuptools >=80.0.0
+    - wheel
   run:
-    - python >={{ python_min }},<3.11
-    - numpy >=1.24.1
-    - pip >=22.3.1
-    - statista >=0.1.8
-    - pyramids >=0.3.2
-    - loguru >=0.6.0
+    - python >={{ python_min }}
+    - numpy >=2.0.0
+    - scipy >=1.10.0
+    - geopandas >=1.0.0
+    - pyramids >=0.46.0
+    - loguru >=0.7.3
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - geostatista
+  commands:
+    - pip check
 
 about:
-  home: https://github.com/MAfarrag/geostatista
-  license:  GPL-3.0-only
+  home: https://github.com/serapeum-org/geostatista
+  license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.md
   summary: Geo-spatial statistical package
   description: |
     Geo-spatial statistical package.
-  dev_url: https://github.com/MAfarrag/geostatista
-  doc_url: https://geostatista.readthedocs.io/
-  doc_source_url: https://github.com/MAfarrag/geostatista/main/README.md
+  dev_url: https://github.com/serapeum-org/geostatista
+  doc_url: https://serapeum-org.github.io/geostatista/
+  doc_source_url: https://github.com/serapeum-org/geostatista/blob/main/README.md
 
 extra:
   recipe-maintainers:
